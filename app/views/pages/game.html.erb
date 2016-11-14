@@ -1,0 +1,9 @@
+<h1>Play the game</h1>
+<p> <%= @grid %> </p>
+<form action="/score" method="get">
+  <label for="question">Fais un truc frere</label>
+  <input type="text" id="question" name="attempt" placeholder="Lance le jeu!!!">
+  <input type="hidden" name="grid" value="<%= @grid.join %>">
+  <input type="hidden" name='start_time' value="<%= @start_time %>">
+  <input type="submit" value="Go on!">
+</form>
